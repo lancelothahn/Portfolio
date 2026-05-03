@@ -30,8 +30,28 @@
     100% { transform: scale(1) rotate(-12deg); opacity: 1; }
   }
 </style>
+  <meta name="ext-resource-dependency" content="Lance Hahn Resume.pdf" data-resource-id="resumePdf" />
 </head>
 <body>
+<script>
+  // For standalone bundle: rewrite resume links to use the inlined blob URL.
+  (function() {
+    const fix = () => {
+      if (window.__resources && window.__resources.resumePdf) {
+        document.querySelectorAll('a[href="Lance Hahn Resume.pdf"]').forEach(a => {
+          a.href = window.__resources.resumePdf;
+        });
+      }
+    };
+    // Run once on DOM ready and again after React mounts.
+    document.addEventListener('DOMContentLoaded', () => {
+      fix();
+      const obs = new MutationObserver(fix);
+      obs.observe(document.body, { childList: true, subtree: true });
+      setTimeout(() => obs.disconnect(), 5000);
+    });
+  })();
+</script>
 <template id="__bundler_thumbnail" data-bg-color="#E8DECE">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
     <rect width="1200" height="800" fill="#E8DECE"/>
