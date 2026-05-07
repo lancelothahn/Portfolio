@@ -224,7 +224,7 @@ function CoverPage({ navigate }) {
           )}
           <div style={{ textAlign: "center", transition: "all 0.8s ease", opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(20px)" }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 68, fontWeight: 800, color: brown, lineHeight: 1.1, marginBottom: 16, letterSpacing: 2 }}>Lance Hahn</h1>
-            <div style={{ fontFamily: "'Special Elite', cursive", fontSize: 19, color: medBrown, letterSpacing: 5, marginBottom: 28 }}>Marketer · Voice Artist · Creator</div>
+            <div style={{ fontFamily: "'Special Elite', cursive", fontSize: 19, color: medBrown, letterSpacing: 5, marginBottom: 28 }}>Marketer · Voice Actor · Creator</div>
             <div style={{ fontFamily: "'Lora', serif", fontStyle: "italic", fontSize: 17, lineHeight: 1.7, color: lightBrown, maxWidth: 520, margin: "0 auto 32px" }}>
               "Crafting stories that resonate, strategies that convert,<br />and voices that linger."
             </div>
